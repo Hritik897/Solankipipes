@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .heading-font { font-family: 'Rajdhani', sans-serif; }
+    .font-oswald { font-family: 'Oswald', sans-serif; }
+    .text-brand-red { color: #EE3124; }
+    .bg-brand-red { background-color: #EE3124; }
+    .border-brand-red { border-color: #EE3124; }
+    
+    .bg-industrial-red {
+        background-color: #d32121;
+        background-image: linear-gradient(rgba(211, 33, 33, 0.9), rgba(211, 33, 33, 0.9)),
+            url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+    }
+</style>
+
+<body class="bg-white">
+    <%- include('partials/header') %>
+
+    <main>
+        <section class="relative pt-20 pb-12 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <nav class="flex mb-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+                    <a href="/" class="hover:text-brand-red transition">Home</a>
+                    <span class="mx-2">/</span>
+                    <a href="/products" class="hover:text-brand-red transition">Products</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-brand-red">HDPE Pipeline</span>
+                </nav>
+
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <div class="w-full lg:w-1/2 space-y-4">
+                        <div class="relative group overflow-hidden border border-gray-200 bg-white">
+                            <div class="absolute top-4 left-4 z-10 bg-brand-red text-white text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">
+                                Large Diameter
+                            </div>
+                            <img src="/public/image/14.jpg.jpeg" 
+                                 alt="630mm HDPE Pipe" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="aspect-square bg-gray-200 border border-gray-200 flex items-center justify-center text-[10px] font-bold text-center px-2 uppercase">Butt Fusion Welding</div>
+                            <div class="aspect-square bg-gray-200 border border-gray-200 flex items-center justify-center text-[10px] font-bold text-center px-2 uppercase">PN10 Rated</div>
+                            <div class="aspect-square bg-gray-200 border border-gray-200 flex items-center justify-center text-[10px] font-bold text-center px-2 uppercase">IS 4984 Standard</div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="text-brand-red font-bold uppercase tracking-widest text-sm">Industrial Infrastructure</span>
+                            <div class="h-[2px] w-12 bg-brand-red"></div>
+                        </div>
+
+                        <h1 class="heading-font text-4xl md:text-5xl font-bold leading-tight text-black uppercase">
+                            630mm PE100 PN10 <br><span class="text-brand-red">HDPE Pipeline</span>
+                        </h1>
+
+                        <p class="text-gray-600 leading-relaxed">
+                            Expertly engineered for high-pressure water transmission and massive lift irrigation projects. This pipeline system is designed to handle water pumping from source points to elevated command areas with leak-proof reliability[cite: 2, 4].
+                        </p>
+
+                        <div class="border border-gray-200 rounded-sm">
+                            <div class="bg-gray-100 px-4 py-2 border-b border-gray-200">
+                                <span class="heading-font font-bold uppercase text-sm tracking-wider">Technical Specifications</span>
+                            </div>
+                            <div class="divide-y divide-gray-200 font-inter text-sm">
+                                <div class="flex justify-between p-4"><span class="font-bold text-gray-500 uppercase">Pipe Diameter</span><span class="font-bold text-black">630 mm [cite: 6]</span></div>
+                                <div class="flex justify-between p-4"><span class="font-bold text-gray-500 uppercase">Material Grade</span><span class="font-bold text-black">PE100 [cite: 7]</span></div>
+                                <div class="flex justify-between p-4"><span class="font-bold text-gray-500 uppercase">Pressure Rating</span><span class="font-bold text-black">PN10 [cite: 8]</span></div>
+                                <div class="flex justify-between p-4"><span class="font-bold text-gray-500 uppercase">Jointing Method</span><span class="font-bold text-black">Butt Fusion Welding [cite: 10]</span></div>
+                                <div class="flex justify-between p-4"><span class="font-bold text-gray-500 uppercase">Compliance</span><span class="font-bold text-black">IS 4984 (BIS) [cite: 9]</span></div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <button class="px-10 py-4 bg-brand-red hover:bg-red-700 text-white font-bold uppercase tracking-widest transition-all shadow-lg">
+                                Inquire Now
+                            </button>
+                            <button class="px-10 py-4 border-2 border-black text-black font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all">
+                                Download Datasheet
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-industrial-red py-16 text-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="border-l-2 border-white/30 pl-6">
+                        <h4 class="font-oswald text-xl mb-2 uppercase">Mechanized Handling</h4>
+                        <p class="text-white/70 text-sm">Expert handling of large-diameter PE100 pipes using industrial equipment[cite: 16].</p>
+                    </div>
+                    <div class="border-l-2 border-white/30 pl-6">
+                        <h4 class="font-oswald text-xl mb-2 uppercase">Precision Alignment</h4>
+                        <p class="text-white/70 text-sm">Accurate alignment ensures stress-free jointing for long-term stability[cite: 17].</p>
+                    </div>
+                    <div class="border-l-2 border-white/30 pl-6">
+                        <h4 class="font-oswald text-xl mb-2 uppercase">Leak-Proof Joints</h4>
+                        <p class="text-white/70 text-sm">Butt fusion joints suitable for high-pressure irrigation mains[cite: 18].</p>
+                    </div>
+                    <div class="border-l-2 border-white/30 pl-6">
+                        <h4 class="font-oswald text-xl mb-2 uppercase">IS Standardized</h4>
+                        <p class="text-white/70 text-sm">Execution aligned with IS 4984:2016 and CPHEEO Manual standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <span class="text-brand-red font-bold uppercase tracking-[0.3em] text-xs">Versatile Solutions</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold text-black mt-2 mb-12 uppercase">Primary Application Areas</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-gray-50 border border-gray-100 hover:border-brand-red transition">
+                        <div class="text-brand-red mb-4"><i class="fas fa-water text-3xl"></i></div>
+                        <h3 class="font-bold text-lg mb-2">Lift Irrigation</h3>
+                        <p class="text-gray-500 text-sm">Efficient pumping mains for agricultural command areas[cite: 21].</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 border border-gray-100 hover:border-brand-red transition">
+                        <div class="text-brand-red mb-4"><i class="fas fa-industry text-3xl"></i></div>
+                        <h3 class="font-bold text-lg mb-2">Water Transmission</h3>
+                        <p class="text-gray-500 text-sm">High-pressure lines for rural and semi-urban infrastructure[cite: 23, 24].</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 border border-gray-100 hover:border-brand-red transition">
+                        <div class="text-brand-red mb-4"><i class="fas fa-shield-alt text-3xl"></i></div>
+                        <h3 class="font-bold text-lg mb-2">Heavy Industrial</h3>
+                        <p class="text-gray-500 text-sm">High-strength systems for demanding agricultural applications[cite: 22].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

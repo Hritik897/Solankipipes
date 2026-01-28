@@ -1,0 +1,188 @@
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<header class="w-full bg-white shadow-sm relative" x-data="{ open: false, mobileOpen: false }">
+    <div class="bg-[#F8F9FA] border-b border-gray-200 py-1.5 px-4 md:px-12 flex flex-col md:flex-row justify-between items-center gap-2">
+        <div class="hidden md:block w-48"></div>
+        <div class="flex items-center space-x-2">
+            <a href="tel:18001232123" class="bg-[#EE3124] text-white px-3 py-1 rounded flex items-center text-xs font-bold hover:bg-red-700 transition">
+                <i class="fas fa-mobile-alt mr-2"></i> Call Us: 1800 123 2123
+            </a>
+            <a href="/image/brochure.pdf" class="bg-[#EE3124] text-white px-3 py-1 rounded flex items-center text-xs font-bold hover:bg-red-700 transition">
+                <i class="fas fa-download mr-2"></i> e-brochure
+            </a>
+        </div>
+    </div>
+
+    <div class="absolute left-4 md:left-12 top-0 h-full z-[60] flex items-center">
+        <a href="/" class="bg-white p-1.5 shadow-md rounded-b-lg">
+            <img src="image/logo.PNG" alt="Ori-Plast Logo" class="h-8 md:h-12">
+        </a>
+    </div>
+
+    <nav class="px-4 md:px-12 py-3 flex items-center justify-end relative">
+        <div class="hidden lg:flex items-center space-x-5 text-[#333] font-semibold text-[13px] uppercase tracking-tight">
+            <a href="/about" class="nav-link">About</a> 
+            <div class="static">
+                <button @click="open = !open" class="nav-link uppercase flex items-center cursor-pointer">
+                    Product <i class="fas fa-chevron-down ml-1 text-[9px]"></i>
+                </button>
+                <div x-show="open" @click.away="open = false" x-cloak
+                    class="absolute left-0 right-0 top-full bg-white shadow-xl border-t border-gray-200 z-50 flex justify-center p-5">
+                    <div class="max-w-7xl w-full grid grid-cols-4 gap-4">
+                        <div class="pr-4">
+                            <a href="/pps_1" class="bg-[#EE3124] text-white px-2 py-0.5 text-[11px] font-bold inline-block mb-3">PIPING SYSTEMS</a>
+                            <div class="space-y-4">
+                                <div>
+                                    <a href="/pps_1" class="text-[#EE3124] text-[15px] font-bold mb-1 block">PE Piping Systems</a>
+                                    <hr class="mb-2 border-gray-100">
+                                    <ul class="space-y-1 text-[#555] text-[13px] normal-case font-normal">
+                                        <li><a href="/pps_1" class="hover:text-blue-600">→ Large Diameter HDPE Piping</a></li>
+                                        <li><a href="/pps_1" class="hover:text-blue-600">→ HDPE Piping System</a></li>
+                                        <li><a href="/pps_1" class="hover:text-blue-600">→ MDPE Piping System</a></li>
+                                        <li><a href="/pps_1" class="hover:text-blue-600">→ Gas Piping System</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <a href="/pps_1" class="text-[#EE3124] text-[15px] font-bold mb-1 block">Industrial Piping Systems</a>
+                                    <hr class="mb-2 border-gray-100">
+                                    <ul class="space-y-1 text-[#555] text-[13px] normal-case font-normal">
+                                        <li><a href="/pps_1" class="hover:text-blue-600">→ PP Piping System</a></li>
+                                        <li><a href="/pps_1" class="hover:text-blue-600">→ PPH Piping System</a></li>
+                                        <li><a href="/pps_1" class="hover:text-blue-600">→ PVDF Piping System</a></li>
+                                        <li><a href="/pps_1" class="hover:text-blue-600">→ CPVC Piping System</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 border-l border-gray-100">
+                            <a href="/pps_1" class="bg-[#EE3124] text-white px-2 py-0.5 text-[11px] font-bold inline-block mb-3">SHEETS & PROFILES</a>
+                            <div class="space-y-4">
+                                <div>
+                                    <a href="/pps_1" class="text-[#EE3124] text-[15px] font-bold mb-1 block">Industrial Sheets</a>
+                                    <hr class="mb-2 border-gray-100">
+                                    <ul class="space-y-1 text-[#555] text-[12px] normal-case font-normal">
+                                        <li><a href="/pps_1">→ HDPE Sheets</a></li><li><a href="/pps_1">→ PP Sheets</a></li><li><a href="/pps_1">→ PPH Sheets</a></li><li><a href="/pps_1">→ PPS Sheets & Ducting</a></li>
+                                        <li><a href="/pps_1">→ PVC Sheets</a></li><li><a href="/pps_1">→ PVDF Sheets</a></li><li><a href="/pps_1">→ CPVC Sheets</a></li><li><a href="/pps_1">→ UHMWPE Sheets</a></li>
+                                        <li><a href="/pps_1">→ Fabric Backed Liners</a></li><li><a href="/pps_1">→ PFA & Modified PTFE Sheets</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <a href="/pps_1" class="text-[#EE3124] text-[15px] font-bold mb-1 block">Protection Liners</a>
+                                    <hr class="mb-2 border-gray-100">
+                                    <ul class="space-y-1 text-[#555] text-[12px] normal-case font-normal">
+                                        <li><a href="/pps_1">→ Concrete Protection Liners</a></li><li><a href="/pps_1">→ Geo Membrane Liners</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 border-l border-gray-100">
+                            <a href="/pps_1" class="bg-[#EE3124] text-white px-2 py-0.5 text-[11px] font-bold inline-block mb-3">MARINE PRODUCTS</a>
+                            <ul class="space-y-1.5 text-[#555] text-[13px] normal-case font-normal mb-6">
+                                <li><a href="/pps_1">→ Dredging Pipelines & Floats</a></li>
+                                <li><a href="/pps_1">→ Aquaculture Fish Cages</a></li>
+                                <li><a href="/pps_1">→ Modular jetty</a></li>
+                                <li><a href="/pps_1">→ Ocean and Territory Markers</a></li>
+                            </ul>
+                            <a href="/pps_1" class="bg-[#EE3124] text-white px-2 py-0.5 text-[11px] font-bold inline-block mb-2">Sewage Products</a>
+                            <hr class="mb-2 border-gray-100">
+                            <ul class="space-y-1 text-[#555] text-[13px] normal-case font-normal">
+                                <li><a href="/pps_1">→ Manholes & Inspection Chambers</a></li>
+                            </ul>
+                        </div>
+                        <div class="pl-4 border-l border-gray-100">
+                            <a href="/pps_1" class="bg-[#EE3124] text-white px-2 py-0.5 text-[11px] font-bold inline-block mb-3">KLEAN CHUTE</a>
+                            <ul class="space-y-1.5 text-[#555] text-[13px] normal-case font-normal">
+                                <li><a href="/pps_1">→ Garbage Chute</a></li>
+                                <li><a href="/pps_1">→ Linen Chute</a></li>
+                                <li><a href="/pps_1">→ Debris Chute</a></li>
+                                <li><a href="/pps_1">→ Compactors</a></li>
+                                <li><a href="/pps_1">→ Carousals</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="/installation_storage" class="nav-link whitespace-nowrap">Installation and Storage</a>
+            <a href="/industries" class="nav-link">Industries</a>
+            <a href="/career" class="nav-link">Career</a>
+            <a href="/certification" class="nav-link">Certification</a>
+
+            <a href="/gallery" class="nav-link">Gallery</a>
+            <a href="/contact" class="nav-link">Contact</a>
+            <button class="text-[#EE3124] pl-2 hover:scale-110 transition-transform">
+                <i class="fas fa-search text-lg"></i>
+            </button>
+        </div>
+
+        <div class="lg:hidden flex items-center space-x-4">
+            <button class="text-[#EE3124]"><i class="fas fa-search text-xl"></i></button>
+            <button @click="mobileOpen = true" class="text-gray-700 text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <div x-show="mobileOpen" x-cloak class="fixed inset-0 z-[100] lg:hidden">
+        <div class="fixed inset-0 bg-black/50" @click="mobileOpen = false"></div>
+        <div class="fixed right-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-xl overflow-y-auto"
+             x-transition:enter="transition transform duration-300" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0">
+            
+            <div class="p-5 flex justify-between items-center border-b">
+                <img src="image/logo.PNG" alt="Logo" class="h-8">
+                <button @click="mobileOpen = false" class="text-2xl text-gray-500">&times;</button>
+            </div>
+
+            <div class="p-4 space-y-3 font-semibold text-gray-700 uppercase text-sm">
+                <a href="/about" class="block border-b pb-2">About</a>
+                
+                <div x-data="{ subOpen: false }">
+                    <div @click="subOpen = !subOpen" class="flex justify-between items-center border-b pb-2 cursor-pointer">
+                        <span>Products</span>
+                        <i class="fas" :class="subOpen ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                    </div>
+                    <div x-show="subOpen" class="bg-gray-50 p-3 mt-1 space-y-4 normal-case font-normal text-[13px]">
+                        <div>
+                            <a href="#" class="font-bold text-[#EE3124] block mb-1">PIPING SYSTEMS</a>
+                            <div class="pl-2 space-y-1">
+                                <a href="#" class="block font-semibold">PE Piping Systems</a>
+                                <a href="#" class="block pl-2 text-gray-600">→ Large Diameter HDPE</a>
+                                <a href="#" class="block pl-2 text-gray-600">→ HDPE Piping</a>
+                                <a href="#" class="block pl-2 text-gray-600">→ MDPE Piping</a>
+                                <a href="#" class="block pl-2 text-gray-600">→ Gas Piping</a>
+                                <a href="#" class="block font-semibold mt-2">Industrial Piping</a>
+                                <a href="#" class="block pl-2 text-gray-600">→ PP / PPH / PVDF / CPVC</a>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#" class="font-bold text-[#EE3124] block mb-1">SHEETS & PROFILES</a>
+                            <div class="pl-2 space-y-1">
+                                <a href="#" class="block text-gray-600">→ Industrial Sheets (All)</a>
+                                <a href="#" class="block text-gray-600">→ Protection Liners</a>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#" class="font-bold text-[#EE3124] block mb-1">MARINE & SEWAGE</a>
+                            <div class="pl-2 space-y-1 text-gray-600">
+                                <a href="#" class="block">→ Dredging & Floats</a>
+                                <a href="#" class="block">→ Aquaculture Fish Cages</a>
+                                <a href="#" class="block">→ Modular Jetty / Markers</a>
+                                <a href="#" class="block">→ Manholes & Chambers</a>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#" class="font-bold text-[#EE3124] block mb-1">KLEAN CHUTE</a>
+                            <div class="pl-2 space-y-1 text-gray-600">
+                                <a href="#" class="block">→ Garbage / Linen / Debris</a>
+                                <a href="#" class="block">→ Compactors & Carousals</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/installation_storage" class="block border-b pb-2">Installation & Storage</a>
+                <a href="/industries" class="block border-b pb-2">Industries</a>
+                <a href="/career" class="block border-b pb-2">Career</a>
+                <a href="/gallery" class="block border-b pb-2">Gallery</a>
+                <a href="/contact" class="block border-b pb-2">Contact</a>
+            </div>
+        </div>
+    </div>
+</header>

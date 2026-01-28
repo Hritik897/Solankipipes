@@ -1,0 +1,40 @@
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".pipeSwiper", {
+            loop: true,
+            autoplay: { delay: 4000 },
+            effect: 'fade',
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+        });
+
+        const scrollContainer = document.getElementById('testimonialScroll');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+
+        nextBtn.addEventListener('click', () => {
+            // Scrolls by the width of one card + gap
+            const cardWidth = scrollContainer.firstElementChild.clientWidth + 24;
+            scrollContainer.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            const cardWidth = scrollContainer.firstElementChild.clientWidth + 24;
+            scrollContainer.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+
+        // Optional: Disable buttons when at the start/end
+        scrollContainer.addEventListener('scroll', () => {
+            const scrollLeft = scrollContainer.scrollLeft;
+            const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+            prevBtn.style.opacity = scrollLeft <= 0 ? "0.5" : "1";
+            nextBtn.style.opacity = scrollLeft >= maxScroll - 5 ? "0.5" : "1";
+        });
+        document.querySelector('a[href$="brochure.pdf"]').addEventListener('click', function (e) {
+            // Add any logic here (e.g., Google Analytics event)
+            console.log("User clicked the download button");
+        });
+    </script>

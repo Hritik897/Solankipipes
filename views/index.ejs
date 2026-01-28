@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+
+
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .heading-font {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        /* Custom Brand Color Utility */
+        .text-brand-red {
+            color: #EE3124;
+        }
+
+        .bg-brand-red {
+            background-color: #EE3124;
+        }
+
+        .border-brand-red {
+            border-color: #EE3124;
+        }
+
+        /* Navigation Hover State */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #EE3124;
+        }
+
+        .font-oswald {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom Industrial Orange Theme */
+        :root {
+            --brand-orange: #F26522;
+        }
+
+        .bg-brand {
+            background-color: var(--brand-orange);
+        }
+
+        .text-brand {
+            color: var(--brand-orange);
+        }
+
+        .border-brand {
+            border-color: var(--brand-orange);
+        }
+
+        /* Swiper Progress Bar Style */
+        .swiper-pagination-progressbar {
+            background: rgba(255, 255, 255, 0.2) !important;
+            height: 4px !important;
+        }
+
+        .swiper-pagination-progressbar-fill {
+            background: var(--brand-orange) !important;
+        }
+
+        .bg-industrial-red {
+            background-color: #d32121;
+            background-image: linear-gradient(rgba(211, 33, 33, 0.9), rgba(211, 33, 33, 0.9)),
+                url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+        }
+
+        .custom-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #ce1b21;
+            border-radius: 10px;
+        }
+
+        .product-card {
+            min-width: 280px;
+            scroll-snap-align: start;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    </style>
+ 
+
+<body class="bg-white">
+
+    <%- include('partials/header') %>
+
+    <main>
+        <section class="relative h-[100vh] w-full bg-slate-900 overflow-hidden">
+
+
+
+            <div class="absolute inset-0 z-30 flex items-center justify-center text-center px-4 pointer-events-none">
+                <div class="max-w-4xl pointer-events-auto">
+                    <div class="flex items-center justify-center gap-3 mb-6">
+                        <span class="h-[2px] w-12 bg-brand"></span>
+                        <span class="text-brand font-bold uppercase tracking-[0.3em] text-sm">Est. 1995 | ISO 9001
+                            Certified</span>
+                        <span class="h-[2px] w-12 bg-brand"></span>
+                    </div>
+
+                    <h1
+                        class="text-5xl md:text-6xl font-oswald font-bold text-white uppercase leading-[0.9] mb-8 drop-shadow-lg">
+                        Engineering <br /> <span class="text-white/90">Strength,</span> <span
+                            class="text-brand italic">Delivering Flow.</span>
+                    </h1>
+
+                    <p class="max-w-xl mx-auto text-gray-200 text-lg md:text-xl mb-10 font-light leading-relaxed">
+                        Premium UPVC, CPVC, and Agriculture piping systems engineered for the toughest industrial
+                        environments.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button
+                            class="px-10 py-4 bg-brand hover:bg-orange-700 text-white font-bold uppercase tracking-widest transition-all transform hover:-translate-y-1">
+                            Download Catalog
+                        </button>
+                        <button
+                            class="px-10 py-4 border-2 border-white text-white font-bold uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all">
+                            Inquire Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper pipeSwiper h-full w-full">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide relative">
+                        <div class="absolute inset-0 bg-slate-900/60 z-10"></div>
+                        <img src="/public/image/IMG_0524.jpg.jpeg"  class="w-full h-full object-cover" alt="Industrial Facility"/>
+                    </div>
+                    <div class="swiper-slide relative">
+                        <div class="absolute inset-0 bg-slate-900/60 z-10"></div>
+                        <img src="/image/14.jpg.jpeg"
+                            class="w-full h-full object-cover" alt="Construction Pipes"/>
+                    </div>
+                    <div class="swiper-slide relative">
+                        <div class="absolute inset-0 bg-slate-900/60 z-10"></div>
+                        <img src="/public/image/15.jpg.jpeg"
+                            class="w-full h-full object-cover" alt="Agriculture Systems"/>
+                    </div>
+                </div>
+                <div class="swiper-pagination !top-auto !bottom-0"></div>
+            </div>
+
+
+
+        </section>
+    </main>
+
+    <section class="bg-gray-100 p-8">
+
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <span class="text-brand-red font-bold uppercase tracking-widest text-xs">Our Inventory</span>
+                    <h2 class="text-3xl font-bold text-slate-900">Featured Products</h2>
+                </div>
+                <div class="hidden md:block text-gray-400 text-sm italic">
+                    Shift + Scroll to explore &rarr;
+                </div>
+            </div>
+
+            <div class="flex overflow-x-auto gap-6 pb-8 custom-scroll snap-x snap-mandatory">
+
+                <div
+                    class="product-card bg-white border border-gray-200 group hover:shadow-xl transition-all duration-300">
+                    <div class="relative h-64 bg-gray-50 overflow-hidden">
+                        <div
+                            class="absolute top-3 left-3 z-10 bg-brand-red text-white text-[10px] font-bold px-2 py-1 uppercase">
+                            ISO Certified</div>
+                        <img src="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&q=80&w=600"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            alt="CPVC Pipe">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-800 mb-2 uppercase">CPVC Plumbing System</h3>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">High-temperature resistance pipes designed
+                            for residential and commercial hot/cold water.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <span class="text-[#ce1b21] font-bold text-sm">Industrial Grade</span>
+                            <button class="bg-slate-900 text-white p-2 rounded-sm hover:bg-brand-red transition">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="product-card bg-white border border-gray-200 group hover:shadow-xl transition-all duration-300">
+                    <div class="relative h-64 bg-gray-50 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=600"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            alt="UPVC Pipe">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-800 mb-2 uppercase">UPVC Pressure Pipes</h3>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">Ideal for potable water supply and irrigation
+                            systems with high durability.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <span class="text-[#ce1b21] font-bold text-sm">UV Resistant</span>
+                            <button class="bg-slate-900 text-white p-2 rounded-sm hover:bg-brand-red transition">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="product-card bg-white border border-gray-200 group hover:shadow-xl transition-all duration-300">
+                    <div class="relative h-64 bg-gray-50 overflow-hidden">
+                        <div
+                            class="absolute top-3 left-3 z-10 bg-brand-red text-white text-[10px] font-bold px-2 py-1 uppercase">
+                            Borewell</div>
+                        <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&q=80&w=600"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            alt="SWR Pipe">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-800 mb-2 uppercase">SWR Drainage Pipes</h3>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">Soil, Waste, and Rainwater management systems
+                            with leak-proof joints.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <span class="text-[#ce1b21] font-bold text-sm">Anti-Leak</span>
+                            <button class="bg-slate-900 text-white p-2 rounded-sm hover:bg-brand-red transition">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="product-card bg-white border border-gray-200 group hover:shadow-xl transition-all duration-300">
+                    <div class="relative h-64 bg-gray-50 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&q=80&w=600"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            alt="Drip Irrigation">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-800 mb-2 uppercase">Agriculture Systems</h3>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">Complete irrigation solutions for sustainable
+                            and high-yield farming.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <span class="text-[#ce1b21] font-bold text-sm">Eco-Friendly</span>
+                            <button class="bg-slate-900 text-white p-2 rounded-sm hover:bg-brand-red transition">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section
+        class="relative max-w-7xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12 overflow-hidden">
+
+        <div class="relative w-full md:w-1/2 flex justify-center">
+            <div class="absolute top-0 left-10 heading-font text-5xl md:text-6xl font-bold z-10">
+                <span class="text-black">Since</span>
+                <span class="text-brand-red">2005</span>
+            </div>
+
+            <img src="/public/image/logo.png" alt="Industrial Illustration" class="w-full h-full max-w-md mt-12 relative z-0"
+                loading="lazy">
+        </div>
+
+        <div class="w-full md:w-1/2 space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="text-brand-red font-semibold text-lg">Welcome to Solanki Pipes</span>
+                <div class="h-[2px] w-12 bg-brand-red"></div>
+            </div>
+
+            <h1 class="heading-font text-4xl md:text-5xl font-bold leading-tight text-black">
+                We Are Here to <span class="text-brand-red">Increase <br> Your Knowledge</span> With Experience
+            </h1>
+
+            <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                Solanki Pipes is a leading industrial engineering company in Haryana    & Pipe Industries, established in 2005, has firmly established itself as a reputable
+                and leading sole proprietorship firm in the industry. With a strong commitment to excellence and
+                innovation, we specialize in the manufacturing and supply of top-notch HDPE Pipes and Sprinkler Systems.
+            </p>
+
+            <div>
+                <button
+                    class="bg-brand-red text-white px-8 py-3 font-semibold rounded-sm hover:bg-red-700 transition-all shadow-lg hover:shadow-red-200">
+                    Read More
+                </button>
+            </div>
+        </div>
+
+        <div class="fixed right-0 top-1/2 -translate-y-1/2 flex flex-col z-50 shadow-2xl">
+            <a href="#"
+                class="bg-black text-white p-3 flex justify-center items-center hover:bg-gray-800 transition-all">
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#"
+                class="bg-[#25D366] text-white p-3 flex justify-center items-center hover:scale-110 transition-all">
+                <i class="fab fa-whatsapp text-xl"></i>
+            </a>
+            <a href="tel:18001232123"
+                class="bg-brand-red text-white p-3 flex justify-center items-center hover:bg-red-700 transition-all rounded-bl-md">
+                <i class="fas fa-phone-alt text-lg"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-6 px-4 overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div class="max-w-xl">
+                    <h2 class="text-red-900 text-sm font-bold uppercase tracking-widest mb-2">Trusted by Industry
+                        Leaders</h2>
+                    <h3 class="text-4xl font-extrabold text-gray-900">What Our Partners Say About <span
+                            class="text-red-600">Solanki Pipes</span></h3>
+                </div>
+                <div class="flex gap-2 mt-6 md:mt-0">
+                    <button id="prevBtn"
+                        class="p-3 rounded-full border border-red-200 text-red-600 hover:bg-red-600 hover:text-white transition-all shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="nextBtn"
+                        class="p-3 rounded-full border border-red-200 text-red-600 hover:bg-red-600 hover:text-white transition-all shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="testimonialScroll"
+                class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-8">
+
+                <div
+                    class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center bg-white p-8 rounded-2xl border border-gray-100 shadow-xl shadow-red-900/5">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"The HDPE pipes from Solanki are exceptional for our irrigation
+                        projects in Haryana. Leak-proof and incredibly durable even under high pressure."</p>
+                    <div class="flex items-center gap-4 border-t pt-6">
+                        <div
+                            class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center font-bold text-red-600">
+                            RK</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 leading-tight">Rajesh Kumar</h4>
+                            <p class="text-sm text-gray-500">Agricultural Contractor, Hisar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center bg-white p-8 rounded-2xl border border-gray-100 shadow-xl shadow-red-900/5">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"We've used Solanki pipes for major PHED water supply schemes.
+                        Their ISI certification and prompt delivery schedules make them our go-to partner."</p>
+                    <div class="flex items-center gap-4 border-t pt-6">
+                        <div
+                            class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center font-bold text-red-600">
+                            SM</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 leading-tight">Sanjay Mehta</h4>
+                            <p class="text-sm text-gray-500">Infrastructure Head, UP Projects</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center bg-white p-8 rounded-2xl border border-gray-100 shadow-xl shadow-red-900/5 border-l-4 border-l-red-600">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"Excellent chemical resistance. We installed these in a sewage
+                        treatment plant two years ago, and they still look as good as new. Highly recommended."</p>
+                    <div class="flex items-center gap-4 border-t pt-6">
+                        <div
+                            class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center font-bold text-red-600">
+                            AD</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 leading-tight">Amit Deshmukh</h4>
+                            <p class="text-sm text-gray-500">Senior Engineer, Municipal Corp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center bg-white p-8 rounded-2xl border border-gray-100 shadow-xl shadow-red-900/5">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"Managing bulk supplies is never an issue with Solanki
+                        Industries. Their factory capacity is impressive and the quality remains consistent."</p>
+                    <div class="flex items-center gap-4 border-t pt-6">
+                        <div
+                            class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center font-bold text-red-600">
+                            VP</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 leading-tight">Vikram Pratap</h4>
+                            <p class="text-sm text-gray-500">Borewell Solutions, Rajasthan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-16">
+
+        <div class="max-w-4xl mx-auto text-center px-4 mb-12">
+            <p class="text-xs font-bold text-gray-500 tracking-[0.2em] uppercase mb-2">More Than One</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-[#d32121] mb-6">Can Ever Imagine</h2>
+            <p class="text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                Solanki Pipes is proud of its commitment to exacting standards in providing a total quality product and
+                high level of service to achieve complete customer satisfaction.
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div
+                class="bg-industrial-red rounded-sm overflow-hidden shadow-2xl flex flex-col lg:flex-row items-stretch">
+
+                <div class="lg:w-1/2 p-6 md:p-10 flex items-center justify-center">
+                    <div class="relative w-full aspect-video rounded shadow-2xl overflow-hidden group">
+                        <iframe class="w-full h-full" src="/video/Solanki Pipes Corporate Video.mp4"
+                            title="Solanki Pipes Corporate Video" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 p-8 md:p-12 text-white flex flex-col justify-center">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 tracking-tight">
+                        High-end Technologies
+                    </h3>
+                    <div class="space-y-4 text-white/90 leading-relaxed text-sm md:text-base">
+                        <p>
+                            Driven by futuristic vision, Solanki Pipes aggressively invest in high-end technologies to
+                            confront the future challenges. PVC & PE Pipes & Fittings offered by Solanki Pipes are
+                            fabricated under the vigil of experienced experts.
+                        </p>
+                        <p>
+                            Rigorous quality tests are carried out at each stage of production, thus, ensuring quality
+                            range of PVC & PE Profiles sent to the market. Entire products of the Company offer are
+                            known for their durability, alkali resistance, quality, easy installation & affordability.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>
+ 
